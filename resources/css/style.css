@@ -1,0 +1,212 @@
+/* Universal Styles */
+/*
+$color1: hsla(180%, 6%, 10%, 1);	rgb(27, 24, 24)			#1b1818		hsla(0, 6%, 9%, 1)
+$color2: hsla(180%, 6%, 20%, 1);																hsla(0, 6%, 19%, 1)
+$color3: hsla(180%, 6%, 30%, 1);	
+$color4: hsla(180%, 6%, 40%, 1);	
+$color5: hsla(180%, 6%, 50%, 1);	
+$color5: hsla(180%, 6%, 90%, 1);	
+*/
+
+html {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 16px;
+	color: hsl(0, 6%, 50%);
+}
+h1:first-letter,
+h2:first-letter,
+li:first-letter,
+a:first-letter,
+div:first-letter { 
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 3rem;
+	color: hsla(0, 6%, 20%, 1);
+}
+h2 {
+	font-size: 2rem;
+	color: hsl(0, 6%, 30%);
+}
+h1, h2 {
+	font-weight: bold;
+}
+
+main {
+	border: 1px solid red;
+	margin-top: 4rem;
+}
+
+/* +----------------------+  */
+/* |		Header Section	 	|	 */
+/* +----------------------+--------------------------------------------------------+  */
+header {
+  position: fixed;
+	top: 0;
+  width: 100%;
+  border-bottom: solid 1px hsl(0, 6%, 90%);
+  background-color: white;
+	z-index: 1;
+}
+
+/*	Navigation Bar with text links	 		 */
+#navbar {
+	padding: 0 24px;
+	display: flex;
+	justify-content: space-between;
+	height: 64px;
+}
+.logobox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.imagebox {
+	height: 3rem;
+}
+.companybox {
+	display: block;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	font-family: 'Amaranth', sans-serif;
+	letter-spacing: 4px;
+}
+.colmar1 {
+	color: hsl(0, 6%, 30%);
+	font-weight: 800;
+}
+.colmar2 {
+	color: hsl(0, 6%, 50%);
+	font-weight: 400;
+}
+.navbox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+a.topnav:not(:last-child) {
+	padding-right: 16px;
+}
+/*	Navigation Bar with icons for small screens	 		 */
+#iconbar {
+	display: none;
+}
+.iconbox {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+}
+a.iconnav {
+	height: 3rem;
+}
+
+
+
+/* +----------------------+  */
+/* |		Splash Section  	|	 */
+/* +----------------------+--------------------------------------------------------+  */
+/*	Splash panel, has main image and slogan and sign up button	 		 */
+.splashbar {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 2rem 5rem 2rem 1.5rem;
+}
+.splashimgbox {
+	margin-right: 1.5rem;
+  width: calc(60% + 3rem);
+}
+.splashimg {
+	width: 100%;
+	height: auto;
+}
+.splashbox {
+	border: 1px dashed green;
+	padding: 2rem 2rem 2rem 1rem;
+  width: calc(40% - 3rem);
+}
+#startbtn {
+	background-color: hsl(0, 6%, 20%);
+	color: white;
+	border-radius: 5px;
+	padding: .5rem;
+	margin: 2rem 2rem;
+  width: calc(100% - 8rem);
+	font-size: 1.5rem;
+}
+#sh1 {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+#sh1 {
+	padding-top: 2rem;
+	padding-bottom: 1.5rem;
+}
+
+/*	Change to icons when the screen size reduces	 		 */
+@media only screen and (max-width: 760px) {
+	#companybox {
+		display: none;
+	}
+	#iconbar {
+		display: flex;
+		justify-content: space-between;
+		height: 64px;
+	}
+	#navbar {
+		display: none;
+	}
+}
+
+/*	Change to splash panel items as screen shrinks	 		 */
+@media only screen and (max-width: 1260px) {
+	h1 {
+		font-size: 2.5rem;
+	}
+}
+@media only screen and (max-width: 1086px) {
+	.splashbar {
+		flex-direction: column;
+	}
+}
+
+@media only screen and (max-width: 760px) {
+}
+
+@media only screen and (max-width: 450px) {
+  #sign-up-section {
+    height: 20rem;
+  }
+  #sign-up-cta h1 {
+    font-size: 2.25rem;
+  }
+  #sign-up-cta h2 {
+    font-size: 2rem;
+  }
+}
+
+
+
+/* +----------------------+  */
+/* |		Features Section 	|	 */
+/* +----------------------+--------------------------------------------------------+  */
+
+@media only screen and (max-width: 890px) {
+}
+
+@media only screen and (max-width: 760px) {
+}
+
+
+
+/* +----------------------+  */
+/* |		Footer Section 		|	 */
+/* +----------------------+--------------------------------------------------------+  */
+footer {
+	border: 1px solid red;
+}
+
+@media only screen and (min-width: 760px) {
+}
