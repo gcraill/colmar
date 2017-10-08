@@ -20,7 +20,11 @@ a:first-letter,
 div:first-letter { 
 	text-transform: uppercase;
 }
-
+a:hover {
+	background-color: hsla(0, 6%, 90%, 1);
+	border-radius: 5px;
+	color: hsla(30,100%,50%,1);
+}
 h1 {
 	font-size: 3rem;
 	color: hsla(0, 6%, 20%, 1);
@@ -52,7 +56,7 @@ header {
 
 /*	Navigation Bar with text links	 		 */
 #navbar {
-	padding: 0 24px;
+	padding: 0 16px 0 24px;
 	display: flex;
 	justify-content: space-between;
 	height: 64px;
@@ -85,8 +89,17 @@ header {
 	justify-content: center;
 	align-items: center;
 }
-a.topnav:not(:last-child) {
+/*	
+a.topnav:not(:last-child) {	
 	padding-right: 16px;
+}
+a.topnav:last-child {
+	padding: 8px;
+}
+etc
+*/
+a.topnav {
+	padding: .5rem;
 }
 /*	Navigation Bar with icons for small screens	 		 */
 #iconbar {
@@ -100,8 +113,23 @@ a.topnav:not(:last-child) {
 }
 a.iconnav {
 	height: 3rem;
+	padding: .5rem;
 }
 
+/*	Change to icons when the screen size reduces	 		 */
+@media only screen and (max-width: 760px) {
+	#companybox {
+		display: none;
+	}
+	#iconbar {
+		display: flex;
+		justify-content: space-between;
+		height: 64px;
+	}
+	#navbar {
+		display: none;
+	}
+}
 
 
 /* +----------------------+  */
@@ -123,7 +151,6 @@ a.iconnav {
 	height: auto;
 }
 .splashbox {
-	border: 1px dashed green;
 	padding: 2rem 2rem 2rem 1rem;
   width: calc(40% - 3rem);
 }
@@ -140,51 +167,82 @@ a.iconnav {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 }
-#sh1 {
+#sh2 {
 	padding-top: 2rem;
 	padding-bottom: 1.5rem;
 }
 
-/*	Change to icons when the screen size reduces	 		 */
-@media only screen and (max-width: 760px) {
-	#companybox {
-		display: none;
-	}
-	#iconbar {
-		display: flex;
-		justify-content: space-between;
-		height: 64px;
-	}
-	#navbar {
-		display: none;
-	}
-}
 
 /*	Change to splash panel items as screen shrinks	 		 */
 @media only screen and (max-width: 1260px) {
 	h1 {
 		font-size: 2.5rem;
 	}
+	#sh1 {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+	}
+	#sh2 {
+		padding-top: 1.5rem;
+		padding-bottom: 1rem;
+	}
 }
 @media only screen and (max-width: 1086px) {
 	.splashbar {
 		flex-direction: column;
 	}
+	.splashbar {
+		padding: 2rem 3rem;
+	}
+	.splashimgbox {
+		margin-right: 0;
+	}
+	.splashbox {
+		width: calc(60% + 3rem);
+		text-align: center;
+		padding: 0;
+	}
+	#sh1 {
+		padding: 1rem 1rem .5rem 1rem;
+	}
+	#sh2 {
+		padding: .5rem 1rem .5rem 1rem;
+	}
+	#startbtn {
+		padding: .5rem;
+		margin: .5rem 2rem .5rem 2rem;
+		width: 50%;
+	}
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 860px) {
+	h1 {
+		font-size: 2rem;
+	}
+	h2 {
+		font-size: 1.5rem;
+	}
+	#startbtn {
+		font-size: 1rem;
+	}
 }
 
-@media only screen and (max-width: 450px) {
-  #sign-up-section {
-    height: 20rem;
-  }
-  #sign-up-cta h1 {
-    font-size: 2.25rem;
-  }
-  #sign-up-cta h2 {
-    font-size: 2rem;
-  }
+@media only screen and (max-width: 600px) {
+	.splashbox {
+		width: 80%;
+	}
+	.splashimgbox {
+		width: 80%;
+	}
+	.splashbar {
+		padding: 2rem 2rem;
+	}
+	h1 {
+		font-size: 1.5rem;
+	}
+	h2 {
+		font-size: 1rem;
+	}
 }
 
 
