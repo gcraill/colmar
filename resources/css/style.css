@@ -159,11 +159,16 @@ a.iconnav {
 #startbtn {
 	background-color: hsla(0, 6%, 20%, 1);
 	color: white;
-	border-radius: 5px;
+	border-radius: 10px;
 	padding: .5rem;
 	margin: 2rem 0;
   width: calc(100% - 8rem);
 	font-size: 1.5rem;
+}
+#startbtn:hover {
+	background-color: hsla(105,100%,20%,1);
+	color: hsla(30,100%,70%,1);
+	cursor: pointer;
 }
 #sh1 {
 	padding-top: 2rem;
